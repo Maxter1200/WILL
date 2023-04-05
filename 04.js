@@ -13,7 +13,16 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
+  var numRev = [];
+  var numArray = num.toString().split('');
+  
+  numArray.forEach((x) => {
+    numRev.unshift(x);
+  });
 
+  numRev = Number(numRev.join(''));
+
+  return numRev === num;
 }
 
 // No modifiques nada debajo de esta linea //
